@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="styles.css" />
+   <style>
+    body {
+       
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #00d9ff, #56ff02, #f8e801);
+    }
+
+    .container {
+      display: flex;
+      max-width: 1000px;
+      margin: 30px auto;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    }
+
+   
+    .sidebar {
+      background-color:#00f597; 
+      color: #4a4a4a;
+      padding: 30px 20px;
+      width: 35%;
+      text-align: center;
+    }
+
+    .sidebar img {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 20px;
+      border: 4px solid rgb(255, 0, 0);
+    }
+
+    .sidebar h2 {
+      font-size: 20px;
+      margin-bottom: 5px;
+    }
+
+    .sidebar .title {
+      font-size: 14px;
+      margin-bottom: 20px;
+      font-weight: lighter;
+    }
+
+    .sidebar h3 {
+      margin-top: 20px;
+      font-size: 16px;
+      border-bottom: 1px solid #f70000;
+      padding-bottom: 5px;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      text-align: left;
+      padding-left: 10px;
+      margin-top: 10px;
+    }
+
+    .sidebar ul li {
+      margin: 6px 0;
+      font-family: 'Lora', serif;
+      font-size: 16px;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .photo-style {
+      width: 250px;
+      height: auto;
+      border-radius: 12px; /* Slightly rounded, elegant */
+      border: 3px solid #e600ff; /* Soft pink-lavender border */
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12); /* Soft drop shadow */
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .photo-style:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 28px rgba(215, 170, 255, 0.4); /* Glow on hover */
+    }
+
+
+    h1 {
+      font-family: 'Dancing Script', cursive;
+      font-size: 36px;
+      color: #ff00ea;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      color: #4b4453;
+    }
+
+    p {
+      font-family: 'Lora', serif;
+      font-size: 16px;
+      color: #333;
+      line-height: 1.6;
+    }
+ 
+    a {
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .email {
+      color: #006fee;
+       font-weight: bold;
+      font-style: italic;
+    }
+
+    .email:hover {
+      background-color: #f5eef8;
+      color: #006fee;
+      padding: 2px 6px;
+      border-radius: 6px;
+     
+    }
+
+    .facebook {
+      color: #006fee;
+      font-weight: bold;
+      font-style: italic;
+    }
+
+    .facebook:hover {
+      background-color: #f5eef8;
+      color: #006fee;
+      padding: 2px 6px;
+      border-radius: 6px;
+    }
+
+    .IG {
+      color: #006fee;
+      font-style: italic;
+      font-weight: bold;
+    }
+
+    .IG:hover {
+      background-color: #f5eef8;
+      color: #006fee;
+      padding: 2px 6px;
+      border-radius: 6px;
+    }
+
+   
+    .main {
+      background-color: #fff;
+      padding: 30px;
+      width: 65%;
+    }
+
+    .main h2 {
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .main section {
+      margin-bottom: 25px;
+    }
+
+    .main ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    .main li {
+      margin-bottom: 10px;
+      font-family: 'Lora', serif;
+      font-size: 16px;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .location {
+      color: #006fee;
+      font-weight: bold;
+       font-weight: bold;
+      font-style: italic;
+    }
+
+    .location:hover {
+      background-color: #f5eef8;
+      color: #6faef5;
+      padding: 2px 6px;
+      border-radius: 6px;
+     
+    }
+   
+    .gif-box {
+      width: 240px;
+      height: auto;
+      border: 2px solid #ff0000; 
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      margin-top: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    .gif-box:hover {
+      transform: scale(1.05);
+    }
+
+   .gif-button-container {
+      display: flex;
+      align-items: center;
+      gap: 20px; 
+      margin-top: 20px;
+    }
+
+    .gif-style {
+      width: 250px;
+      height: auto;
+      border: 3px solid #f70000;        
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); 
+      border-radius: 8px;     
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .gif-style:hover {
+      transform: scale(1.03);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25); 
+    }
+
+
+    .fancy-button {
+      padding: 12px 24px;
+      background: linear-gradient(90deg, #0091f8, #0091f8);
+      color: #333;
+      text-decoration: none;
+      border-radius: 20px;
+      font-weight: bold;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: 0.3s;
+    }
+
+    .fancy-button:hover {
+      background: linear-gradient(90deg, #0091f8, #0091f8);
+      transform: scale(1.05);
+    }
+
+
+
+
+
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <img src="image/profile.jpg" alt="My Photo" class="profile-pic">
+      <h2>Christian Jeff R. Bacani</h2>
+    
+
+      <h3>CONTACT INFO</h3>
+      <ul>
+        <li> <a href="tel:+63 9701798442" class="email" target="_blank">+63 9701798442</a></li>
+        <li> <a href="mailto:christianjeffbacani4@gmail.com" class="email" target="_blank">christianjeffbacani4@gmail.com</a></li>
+        <li> <a href="Mi4wIKXMDSoASAFQAw%3D%3Dhttps://www.google.com/maps/place/Santo+Domingo+1st,+Capas,+Tarlac/@15.3432962,120.5947091,16z/data=!3m1!4b1!4m6!3m5!1s0x3396c1e880766af5:0xe0c435a05d346394!8m2!3d15.3442682!4d120.6012912!16s%2Fg%2F11gbf90cv5?entry=ttu&g_ep=EgoyMDI1MDcyNy4wIKXMDSoASAFQAw%3D%3D" class="location" target="_blank">Santo Domingo 1st, Capas, Tarlac</a></li>
+        <li> <a href="https://www.facebook.com/christianjeff.bacani" class="facebook" target="_blank">fb: Christian Jeff Bacani</a></li>
+        <li> <a href="https://www.instagram.com/chtn_bcn/" class="IG" target="_blank">IG: @chtn_bcn</a></li>
+      </ul>
+
+      <h3>HOBBIES</h3>
+      <ul>
+        <li>Watching Movie</li>
+        <li>Playing Call of Duty</li>
+        <li>Playing Basketball</li>
+        <li>Watching Animes</li>
+      </ul>
+       <img src="https://8designers.com/blog/bl-content/uploads/pages/d1d6f72feff040a9a81d9dc06a3b366d/Wow-gif.gif" alt="Frieren gif" class="gif-box">
+
+
+    </div>
+
+    <div class="main">
+      <section class="about">
+        <h2>About Me</h2>
+        <p>
+            I am an IT student passionate about technology, expand my knowledge about technology and to become a programmer or graphic designer
+        </p>
+          
+      </section>
+
+      <hr>
+
+      <section class="education">
+        <h2>Education</h2>
+        <ul>
+          <li><strong>Elementary:</strong>Pag-Asa Elementary School</li>
+          <li><strong>High School:</strong> Sto Nino Academy Of Bamban Inc</li>
+          <li><strong>Senior High:</strong> O'Donnell Senior High School</li>
+          <li><strong>College:</strong> Dominican College of Tarlac</li>
+        </ul>
+      </section>
+
+      <hr>
+
+      <section class="skills">
+        <h2>Skills</h2>
+        <p>• Developed a project that showcases my IT skills through practical, real-world applications. •</p>
+
+        <hr>
+
+      <section class="project and experience"></section>
+    
+        <h2>Project and Experience</h2>
+        <p>My Project i experience so far is our SAD project for the experience is a just a basic coding about HTML, CSS, python etc.</p>
+      </section>
+      <div class="gif-button-container">
+          <img src="https://i.pinimg.com/originals/9a/3c/3f/9a3c3fb5f73822af8514df07f6676392.gif" alt="Wind Breaker gif" class="gif-style">
+          <a href="your-resume.pdf" download class="fancy-button"  alt="Wind Breaker gif" class="gif-style">Download Resume </a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+</head>
+
+
+
+      
